@@ -29,7 +29,6 @@ $router->map('GET', 'iniciarMazo', function() {
     $mazoPrueba->armarMazo();
     http_response_code(200);
     echo '{"Message" : "Mazo iniciado con exito"}';
-    header('Location: darCarta');
   } catch (\Exception $e) {
     http_response_code(500);
     echo '{"Message" : "Error, no se pudo obtener mazo"}';
