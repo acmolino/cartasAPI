@@ -37,7 +37,7 @@ $router->map('GET', 'iniciarMazo', function() {
 *
 *
 */
-$router->map('GET', 'darCarta/[i:id]', function($id) { 
+$router->map('GET', 'darCarta/[*:id]', function($id) { 
   try {
     session_id($id);
     session_start();
