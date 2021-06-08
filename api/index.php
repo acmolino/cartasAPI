@@ -37,8 +37,10 @@ $router->map('GET', 'iniciarMazo', function() {
 *
 *
 */
-$router->map('GET', 'darCarta', function() { 
+$router->map('GET', 'darCarta/[i:id]', function($id) { 
   try {
+    session_id($id);
+    session_start();
     echo json_encode($_SESSION['mazoNuevo']->mostrarDatos(), JSON_PRETTY_PRINT);
     http_response_code(200);
   } catch (\Exception $e) {
