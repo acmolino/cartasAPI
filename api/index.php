@@ -25,7 +25,7 @@ $router->map('GET', 'iniciarMazo', function() {
   	$_SESSION['mazoNuevo'] = new Mazo();
     $_SESSION['mazoNuevo']->armarMazo();
     http_response_code(200);
-    echo '{"Message" : "Mazo iniciado con exito", "ID" : '.session_id().'}';
+    echo '{"Message" : "Mazo iniciado con exito", "ID" : "'.session_id().'"}';
   } catch (\Exception $e) {
     http_response_code(500);
     echo '{"Message" : "Error, no se pudo obtener mazo"}';
