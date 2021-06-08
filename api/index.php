@@ -56,7 +56,7 @@ if( is_array($match) && is_callable( $match['target'] ) ) {
   call_user_func_array( $match['target'], $match['params'] );
 } else {
   // no route was matched
-  header( $_SERVER["SERVER_PROTOCOL"] . ' 403 Not Found');
+  header( $_SERVER["SERVER_PROTOCOL"] . ' 405 Not Found');
 }
 
 ?>
