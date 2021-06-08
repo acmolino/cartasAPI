@@ -11,7 +11,7 @@ require_once CONFIG.'includes.php';
 $router = new AltoRouter();
 
 //Mi directorio base
-$router->setBasePath('/logosofico/Integrada/cartasAPI');
+$router->setBasePath('/api');
 session_start();
 
 /**
