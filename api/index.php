@@ -1,4 +1,6 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE, OPTIONS');
 header('Content-type: Application/JSON');
 //LAs rutas internas
 require_once "logica/mazo.php";
