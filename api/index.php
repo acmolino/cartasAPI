@@ -13,7 +13,7 @@ $router = new AltoRouter();
 
 //Mi directorio base
 $router->setBasePath('/');
-session_start();
+//session_start();
 
 /**
 *
@@ -22,6 +22,7 @@ session_start();
 */
 $router->map('GET', 'iniciarMazo', function() {
   try {
+    session_start();
   	$_SESSION['mazoNuevo'] = new Mazo();
     $_SESSION['mazoNuevo']->armarMazo();
     http_response_code(200);
