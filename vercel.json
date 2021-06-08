@@ -4,11 +4,7 @@
       "runtime": "vercel-php@0.4.0"
     }
   },
-  
- /* "routes": [
-    { "src": "/iniciar",  "dest": "/api/iniciarMazo.php"}
-  ]*/
-  
+ 
   "redirects": [
     { "source": "/me", "destination": "/api/iniciarMazo.php" }
   ]
