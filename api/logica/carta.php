@@ -8,7 +8,7 @@ class Carta implements JsonSerializable{
 	public function __construct($palo, $numero){
 		$this->palo = $palo;
 		$this->numero = $numero;
-		$this->img = "img/".$palo."/".$numero.".png"; 
+		$this->img = "https://acmolino.github.io/recursos/cartas-img/".$palo."/".$numero.".png"; 
 	}
 
 	public function jsonSerialize() {
