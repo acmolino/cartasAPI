@@ -5,8 +5,8 @@
     }
   },
   
-  "redirects": [
-    { "src": "/(.*)",  "destination": "/api/index.php"}
+  "routes": [
+    { "src": "/(.*)",  "dest": "/api/index.php"}
   ]
   
 }
