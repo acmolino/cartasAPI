@@ -1,6 +1,7 @@
 <?php
 header('Content-type: Application/JSON');
 require_once "logica/mazo.php";
+require_once "logica/carta.php";
 
 
 try {
