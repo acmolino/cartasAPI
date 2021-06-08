@@ -5,8 +5,12 @@
     }
   },
   
-  "routes": [
+ /* "routes": [
     { "src": "/iniciar",  "dest": "/api/iniciarMazo.php"}
+  ]*/
+  
+  "redirects": [
+    { "source": "/me", "destination": "/api/iniciarMazo.php" }
   ]
   
 }
