@@ -15,8 +15,6 @@ $router = new AltoRouter();
 $router->setBasePath('/');
 session_start();
 
-//$GLOBALS['mazoNuevo'] = new Mazo();
-
 /**
 *
 *
@@ -26,9 +24,8 @@ $router->map('GET', 'iniciarMazo', function() {
   try {
   	$_SESSION['mazoNuevo'] = new Mazo();
     $_SESSION['mazoNuevo']->armarMazo();
-    //$GLOBALS['mazoNuevo']->armarMazo();
     http_response_code(200);
-    echo '{"Message" : "Mazo iniciado con exito"}';
+    echo '{"Message" : "Mazo iniciado con exito", "ID" : '.session_id().'}';
   } catch (\Exception $e) {
     http_response_code(500);
     echo '{"Message" : "Error, no se pudo obtener mazo"}';
@@ -43,7 +40,6 @@ $router->map('GET', 'iniciarMazo', function() {
 $router->map('GET', 'darCarta', function() { 
   try {
     echo json_encode($_SESSION['mazoNuevo']->mostrarDatos(), JSON_PRETTY_PRINT);
-    //echo json_encode($GLOBALS['mazoNuevo']->mostrarDatos(), JSON_PRETTY_PRINT);
     http_response_code(200);
   } catch (\Exception $e) {
     http_response_code(500);
@@ -62,7 +58,7 @@ if( is_array($match) && is_callable( $match['target'] ) ) {
   call_user_func_array( $match['target'], $match['params'] );
 } else {
   // no route was matched
-  header( $_SERVER["SERVER_PROTOCOL"] . ' 405 Not Found');
+  header( $_SERVER["SERVER_PROTOCOL"] . ' 403 No deberias estar aqui');
 }
 
 ?>
