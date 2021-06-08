@@ -13,12 +13,13 @@ $router = new AltoRouter();
 
 //Mi directorio base
 $router->setBasePath('/');
-//session_start();
 
 /**
+* Inicializa el nuevo mazo
 *
-*
-*
+* Genera una session para guardar el mazo 
+* Devuelve el ID de session para luego recuperar
+* el mazo
 */
 $router->map('GET', 'iniciarMazo', function() {
   try {
@@ -34,9 +35,11 @@ $router->map('GET', 'iniciarMazo', function() {
 });
 
 /**
+* Saca de a una carta aleatoriamante
 *
-*
-*
+* Se le pasa el id de la session y saca
+* de a una carta de forma aleatoria respetando
+* el mazo de la session
 */
 $router->map('GET', 'darCarta/[*:id]', function($id) { 
   try {
