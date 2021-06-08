@@ -6,7 +6,7 @@
   },
   
   "redirects": [
-    { "src": "/(.*)",  "dest": "/api/index.php"}
+    { "src": "/(.*)",  "destination": "/api/index.php"}
   ]
   
 }
