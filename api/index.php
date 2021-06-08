@@ -35,7 +35,7 @@ $router->map('GET', 'iniciarMazo', function() {
 *
 *
 */
-$router->map('GET', '/darCarta', function() { 
+$router->map('GET', 'darCarta', function() { 
   try {
     echo json_encode($_SESSION['mazoNuevo']->mostrarDatos(), JSON_PRETTY_PRINT);
     http_response_code(200);
