@@ -15,6 +15,8 @@ $router = new AltoRouter();
 $router->setBasePath('/');
 session_start();
 
+$mazoPrueba = new Mazo();;
+
 /**
 *
 *
@@ -24,6 +26,7 @@ $router->map('GET', 'iniciarMazo', function() {
   try {
   	$_SESSION['mazoNuevo'] = new Mazo();
     $_SESSION['mazoNuevo']->armarMazo();
+    $mazoPrueba->armarMazo();
     http_response_code(200);
     echo '{"Message" : "Mazo iniciado con exito"}';
     header('Location: darCarta');
@@ -40,7 +43,8 @@ $router->map('GET', 'iniciarMazo', function() {
 */
 $router->map('GET', 'darCarta', function() { 
   try {
-    echo json_encode($_SESSION['mazoNuevo']->mostrarDatos(), JSON_PRETTY_PRINT);
+    //echo json_encode($_SESSION['mazoNuevo']->mostrarDatos(), JSON_PRETTY_PRINT);
+    echo json_encode($mazoPrueba->mostrarDatos(), JSON_PRETTY_PRINT);
     http_response_code(200);
   } catch (\Exception $e) {
     http_response_code(500);
