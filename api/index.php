@@ -10,7 +10,7 @@ require_once 'config/router/autoload.php';
 $router = new AltoRouter();
 
 //Mi directorio base
-$router->setBasePath('/api');
+$router->setBasePath('/');
 session_start();
 
 /**
@@ -18,7 +18,7 @@ session_start();
 *
 *
 */
-$router->map('GET', '/iniciarMazo', function() {
+$router->map('GET', 'iniciarMazo', function() {
   try {
   	$_SESSION['mazoNuevo'] = new Mazo();
     $_SESSION['mazoNuevo']->armarMazo();
