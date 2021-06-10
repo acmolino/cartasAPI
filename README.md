@@ -28,7 +28,7 @@ Devuelve:
     "carta": {
         "palo": "basto",
         "numero": 3,
-        "img": "https:\/\/acmolino.github.io\/recursos\/cartas-img\/basto\/3.png"
+        "img": "https://acmolino.github.io/recursos/cartas-img/basto/3.png"
     }
 }
 ```
