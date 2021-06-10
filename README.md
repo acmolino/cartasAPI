@@ -35,4 +35,4 @@ https://cartasapi.vercel.app/darCarta/[ID]
 }
 ```
 
-Las imagenes de las cartas y el algoritmo de armado fue provisto por [Nicolás Artigas](https://github.com/nicolasArtigas)
+Las imágenes de las cartas y el algoritmo de armado fue provisto por [Nicolás Artigas](https://github.com/nicolasArtigas)
